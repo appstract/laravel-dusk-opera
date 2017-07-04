@@ -1,0 +1,32 @@
+{
+    "name": "appstract/laravel-dusk-opera",
+    "description": "Run Dusk tests in Opera",
+    "keywords": [
+        "appstract",
+        "laravel",
+        "Dusk",
+        "Opera",
+        "testing"
+    ],
+    "homepage": "https://github.com/appstract/laravel-dusk-opera",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olav van Schie",
+            "email": "hello@appstract.team",
+            "homepage": "https://appstract.team",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Appstract\\DuskDrivers\\Opera\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
