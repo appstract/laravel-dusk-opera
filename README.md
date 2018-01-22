@@ -26,6 +26,7 @@ use Appstract\DuskDrivers\Opera\SupportsOpera;
 abstract class DuskTestCase extends BaseTestCase
 {
     use CreatesApplication, SupportsOpera;
+}
 ```
 
 Now you can start the server in the ```prepare``` method:
