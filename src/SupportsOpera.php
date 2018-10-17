@@ -3,7 +3,6 @@
 namespace Appstract\DuskDrivers\Opera;
 
 use Symfony\Component\Process\Process;
-use Symfony\Component\Process\ProcessBuilder;
 
 trait SupportsOpera
 {
@@ -47,10 +46,11 @@ trait SupportsOpera
      */
     protected static function buildOperaProcess()
     {
-        return (new ProcessBuilder())
-            ->setPrefix(realpath(__DIR__.'/../bin/operadriver-'.static::driverSuffix()))
-            ->getProcess()
-            ->setEnv(static::operaEnvironment());
+        return (new Process(
+            [realpath(__DIR__.'/../bin/operadriver-'.static::driverSuffix())],
+            null,
+            static::operaEnvironment()
+        ));
     }
 
     /**
