@@ -46,11 +46,11 @@ trait SupportsOpera
      */
     protected static function buildOperaProcess()
     {
-        return (new Process(
+        return new Process(
             [realpath(__DIR__.'/../bin/operadriver-'.static::driverSuffix())],
             null,
             static::operaEnvironment()
-        ));
+        );
     }
 
     /**
